@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แพ็กเกจสินค้า - Mak Bong</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Prompt', sans-serif; }</style>
+</head>
+<body class="bg-[#0f0f0f] text-gray-100 min-h-screen flex flex-col justify-between">
+    <!-- จุดเรียก Navbar -->
+    <div id="navbar-container"></div>
+
+    <main class="flex-grow py-16 max-w-4xl mx-auto px-4 w-full">
+        <div class="text-center mb-12">
+            <span class="text-amber-400 text-xs font-bold tracking-widest uppercase bg-red-950 px-3 py-1 rounded-full border border-amber-500/30">Signature Package</span>
+            <h1 class="text-4xl font-black text-white mt-3">แพ็กเกจความแซ่บ Mak Bong</h1>
+            <p class="text-gray-400 mt-2">กรอบสนั่น เผ็ดร้อนสะใจ คัดสรรคุณภาพเน้นๆ ทุกกระปุก</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-amber-500 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- แพ็กเกจเดี่ยว (Highlight Card) -->
+        <div class="bg-gradient-to-b from-red-950/50 via-black to-black border-2 border-amber-400 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 bg-amber-500/10 w-48 h-48 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
+                <div>
+                    <span class="bg-gradient-to-r from-red-600 to-amber-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow">🔥 สินค้าซิกเนเจอร์</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white mt-4 mb-3">น้ำพริกแคปหมู Mak Bong (สูตรต้นตำรับ)</h2>
+                    <p class="text-gray-300 text-base leading-relaxed max-w-xl">
+                        แคปหมูไร้มันกรอบสนั่น คลุกเคล้าด้วยน้ำพริกสูตรลับเฉพาะ เผ็ดร้อนหอมกลิ่นพริกคั่วเตาถ่าย ทานกับอะไรก็อร่อย ฟินจนหยุดไม่อยู่!
+                    </p>
+                </div>
+                <div class="text-left md:text-right bg-black/60 border border-amber-500/30 p-6 rounded-2xl w-full md:w-auto min-w-[200px]">
+                    <span class="text-xs text-gray-400 uppercase tracking-widest block mb-1">ราคาพิเศษ</span>
+                    <div class="text-4xl font-black text-amber-400">150.-</div>
+                    <span class="text-xs text-gray-400">ต่อกระปุก (ขนาดพกพาคุ้มค่า)</span>
+                </div>
+            </div>
+
+            <!-- รายละเอียดจุดเด่น -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 pt-6 border-t border-amber-500/20">
+                <div class="flex items-center space-x-3 text-gray-300 text-sm">
+                    <span class="text-amber-400 text-lg">✓</span>
+                    <span>แคปหมูทอดสดใหม่ ไม่เหม็นหืน</span>
+                </div>
+                <div class="flex items-center space-x-3 text-gray-300 text-sm">
+                    <span class="text-amber-400 text-lg">✓</span>
+                    <span>ซีลสุญญากาศ เก็บความกรอบนาน</span>
+                </div>
+                <div class="flex items-center space-x-3 text-gray-300 text-sm">
+                    <span class="text-amber-400 text-lg">✓</span>
+                    <span>ร่วมโปรโมชั่น ซื้อ 10 แถม 1 ใน Line OA</span>
+                </div>
+            </div>
+
+            <!-- ปุ่มสั่งซื้อ -->
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://u.lin.ee/nxX3QAK" target="_blank" class="flex-grow text-center bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-bold py-4 px-8 rounded-2xl shadow-xl shadow-red-900/50 transition transform hover:-translate-y-0.5 text-lg">
+                    🛒 สั่งซื้อผ่าน Line OA (รับสิทธิ์สะสมแต้ม/คูปอง)
+                </a>
+                <a href="promotion.html" class="text-center border border-amber-500/50 hover:bg-amber-500/10 text-amber-400 font-bold py-4 px-6 rounded-2xl transition">
+                    ดูโปรโมชั่น 10 แถม 1 🔥
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- จุดเรียก Footer -->
+    <div id="footer-container"></div>
+
+    <!-- เรียกไฟล์ JavaScript กลาง -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบรายรับ-รายจ่าย - Mak Bong</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Prompt', sans-serif; }</style>
+</head>
+<body class="bg-[#0f0f0f] text-gray-100 min-h-screen flex flex-col justify-between">
+
+    <!-- จุดเรียก Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-10 max-w-7xl mx-auto px-4 w-full">
+        <div class="text-center mb-8">
+            <span class="text-amber-400 text-xs font-bold tracking-widest uppercase bg-red-950 px-3 py-1 rounded-full border border-amber-500/30">Financial Management</span>
+            <h1 class="text-3xl md:text-4xl font-black text-white mt-3">ระบบบัญชีรายรับ - รายจ่าย Mak Bong</h1>
+            <p class="text-gray-400 mt-2 text-sm md:text-base">ตรวจสอบ บันทึก และติดตามสถานะทางการเงินของร้านได้แบบเรียลไทม์</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-amber-500 mx-auto mt-3 rounded"></div>
+        </div>
+
+        <!-- Toolbar: ปุ่มลิงก์แยกออกนอกเว็บ & ปุ่มรีเฟรช Iframe -->
+        <div class="flex flex-col sm:flex-row justify-between items-center bg-black border border-amber-500/30 p-4 rounded-xl mb-6 shadow-lg gap-4">
+            <div class="text-sm text-gray-300 flex items-center gap-2">
+                <span class="inline-block w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+                <span>เชื่อมต่อ Google Apps Script Web App แล้ว</span>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <!-- ปุ่มรีเฟรช Iframe -->
+                <button onclick="refreshIframe()" class="bg-gray-800 hover:bg-gray-700 text-amber-400 border border-amber-500/40 px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition shadow">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    รีเฟรชข้อมูล
+                </button>
+                <!-- ปุ่มเปิดในแท็บใหม่ (Link) -->
+                <a id="external-link" href="https://script.google.com/macros/s/AKfycbztJwly884LYzjDI4PHjIe1v1Jukdgi5kCUoeqq4DJVktk1XpptxKXNONc36_nYbYOQtQ/exec" target="_blank" class="bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition shadow">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    เปิดเว็บแอปเต็มจอ
+                </a>
+            </div>
+        </div>
+
+        <!-- Iframe Container -->
+        <div class="bg-black border border-amber-500/30 rounded-2xl overflow-hidden shadow-2xl relative">
+            <iframe 
+                id="script-iframe"
+                src="https://script.google.com/macros/s/AKfycbztJwly884LYzjDI4PHjIe1v1Jukdgi5kCUoeqq4DJVktk1XpptxKXNONc36_nYbYOQtQ/exec" 
+                class="w-full h-[700px] border-0 bg-white">
+            </iframe>
+        </div>
+    </main>
+
+    <!-- จุดเรียก Footer -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript สำหรับควบคุมการรีเฟรช Iframe -->
+    <script>
+        function refreshIframe() {
+            const iframe = document.getElementById('script-iframe');
+            // รีเซ็ต src เพื่อบังคับให้ iframe โหลดข้อมูลใหม่จาก Apps Script
+            iframe.src = iframe.src;
+        }
+    </script>
+
+    <!-- เรียกไฟล์ JavaScript กลาง (โหลด Navbar / Footer) -->
+    <script src="script.js"></script>
+</body>
+</html>

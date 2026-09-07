@@ -1,0 +1,16 @@
+โครงสร้างไฟล์ที่จะต้องสร้างใน Folder เดียวกัน:
+navbar.html (ไฟล์เก็บ Navbar กลาง)
+
+footer.html (ไฟล์เก็บ Footer กลาง)
+
+index.html (หน้าแรก / ภาพรวมธุรกิจ)
+
+about.html (แผนธุรกิจ)
+
+products.html (แพ็กเกจสินค้า)
+
+products.html (โปรโมชั่น)
+
+location.html (แผนที่ตั้ง)
+
+script.js (ไฟล์ดึง Navbar/Footer และลูกเล่นปุ่มเปิด-ปิดเมนวมือถือ)

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - น้ำพริกแคปหมู แม็กบอง</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Prompt', sans-serif; }</style>
+</head>
+<body class="bg-[#0f0f0f] text-gray-100 min-h-screen flex flex-col justify-between">
+
+    <!-- จุดเรียก Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Hero Section -->
+    <main class="flex-grow">
+        <section class="relative bg-gradient-to-b from-black via-[#1a0505] to-[#0f0f0f] py-24 px-4 text-center overflow-hidden border-b border-red-900/30">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-600/10 via-transparent to-transparent pointer-events-none"></div>
+            <div class="max-w-4xl mx-auto relative z-10">
+                <span class="bg-red-950 text-amber-400 border border-amber-500/40 text-xs px-4 py-1.5 rounded-full uppercase tracking-widest font-bold shadow-lg">🔥 ตำนานความแซ่บระดับพรีเมียม</span>
+                <h1 class="text-4xl md:text-6xl font-black mt-6 mb-6 tracking-tight text-white leading-tight">
+                    น้ำพริกแคปหมู <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-400">"แม็กบอง"</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                    กรอบสนั่น หอมกลิ่นเครื่องเทศ พริกคั่วเตาถ่านสูตรลับเฉพาะ เผ็ดร้อนสะใจถึงพริกถึงขิงแบบฉบับคนรักความแซ่บ!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="products.html" class="bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-bold py-3.5 px-8 rounded-xl shadow-xl shadow-red-900/45 transition transform hover:-translate-y-1">ดูแพ็กเกจสินค้า</a>
+                    <a href="promotion.html" class="border border-amber-500/50 hover:bg-amber-500/10 text-amber-400 font-bold py-3.5 px-8 rounded-xl transition">เช็คโปรโมชั่นเดือด 🔥</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ภาพรวมธุรกิจ (Business Overview) -->
+        <section class="py-16 max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-amber-400 mb-2">ภาพรวมธุรกิจ (Business Overview)</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-amber-500 mx-auto rounded"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-black border border-amber-500/30 p-8 rounded-2xl shadow-xl hover:border-amber-400 transition group">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition">วิสัยทัศน์แบรนด์</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">มุ่งสู่การเป็นแบรนด์น้ำพริกและแคปหมูอันดับหนึ่งในใจสายแซ่บ การันตีความสะอาด มาตรฐานการผลิตที่ปลอดภัย และรสชาติจัดจ้านคงที่ทุกกระปุก</p>
+                </div>
+                <div class="bg-black border border-amber-500/30 p-8 rounded-2xl shadow-xl hover:border-amber-400 transition group">
+                    <div class="text-4xl mb-4">🔥</div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition">จุดเด่นผลิตภัณฑ์</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">แคปหมูทอดสดใหม่ไร้มัน น้ำพริกสูตรเข้มข้นไม่ใส่สารกันบูด คั่วด้วยไฟอ่อนจนหอมกรุ่น คลุกเคล้าเข้ากันจนได้ความกรอบและเผ็ดร้อนกำลังดี</p>
+                </div>
+                <div class="bg-black border border-amber-500/30 p-8 rounded-2xl shadow-xl hover:border-amber-400 transition group">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition">กลุ่มเป้าหมายหลัก</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">วัยทำงาน นักเรียน นักศึกษา และผู้ที่ชื่นชอบอาหารรสจัดจ้าน ทานคู่กับอะไรก็อร่อย ทั้งข้าวสวยร้อนๆ หรือทานเล่นเป็นสแน็ค</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- จุดเรียก Footer -->
+    <div id="footer-container"></div>
+
+    <!-- เรียกไฟล์ JavaScript กลาง -->
+    <script src="script.js"></script>
+</body>
+</html>
