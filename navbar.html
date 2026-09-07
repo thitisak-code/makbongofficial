@@ -7,21 +7,22 @@
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
             <div class="flex items-center space-x-3">
-                <a href="index.html" class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="img/Logo.png" alt="Mak Bong Logo" class="w-11 h-11 object-contain rounded-full border border-amber-500/50 shadow-md shadow-red-900/50 group-hover:scale-105 transition transform">
                     <span class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-400 to-yellow-500 drop-shadow-[0_2px_10px_rgba(220,38,38,0.5)]">
-                        🔥 Mak Bong
+                        Mak Bong
                     </span>
                 </a>
             </div>
             <!-- Desktop Menu -->
-            <div class="flex items-center space-x-5 text-sm font-semibold">
-                <a href="index.html" class="nav-link text-gray-300 hover:text-amber-400 transition">หน้าแรก</a>
-                <a href="about.html" class="nav-link text-gray-300 hover:text-amber-400 transition">แผนธุรกิจ</a>
-                <a href="products.html" class="nav-link text-gray-300 hover:text-amber-400 transition">แพ็กเกจ</a>
-                <a href="promotion.html" class="nav-link text-gray-300 hover:text-amber-400 transition">โปรโมชั่น 🔥</a>
-                <a href="location.html" class="nav-link text-gray-300 hover:text-amber-400 transition">แผนที่ตั้ง</a>
-                <a href="accounting.html" class="nav-link text-amber-400 hover:text-amber-300 transition font-bold">📊 รายรับ-รายจ่าย</a>
-                <a href="products.html" class="bg-gradient-to-r from-red-600 to-amber-600 text-white px-4 py-2 rounded-full shadow-lg shadow-red-900/50 hover:from-red-500 hover:to-amber-500 transition transform hover:scale-105">สั่งซื้อ</a>
+            <div id="desktop-menu" class="flex items-center space-x-3 text-sm font-semibold">
+                <a href="index.html" class="nav-link text-gray-300 hover:text-amber-400 transition py-1">หน้าแรก</a>
+                <a href="about.html" class="nav-link text-gray-300 hover:text-amber-400 transition py-1">แผนธุรกิจ</a>
+                <a href="products.html" class="nav-link text-gray-300 hover:text-amber-400 transition py-1">แพ็กเกจ</a>
+                <a href="promotion.html" class="nav-link text-gray-300 hover:text-amber-400 transition py-1">โปรโมชั่น 🔥</a>
+                <a href="location.html" class="nav-link text-gray-300 hover:text-amber-400 transition py-1">แผนที่ตั้ง</a>
+                <a href="accounting.html" class="nav-link text-gray-300 hover:text-amber-400 transition py-1">📊 รายรับ-รายจ่าย</a>
+                <a href="products.html" class="bg-gradient-to-r from-red-600 to-amber-600 text-white px-4 py-2 rounded-full shadow-lg shadow-red-900/50 hover:from-red-500 hover:to-amber-500 transition transform hover:scale-105 ml-2">สั่งซื้อ</a>
             </div>
         </div>
     </div>
@@ -30,8 +31,9 @@
 <!-- Mobile Header (โลโก้ด้านบนสุดสำหรับมือถือ) -->
 <div class="bg-black border-b border-amber-500/30 sticky top-0 z-50 px-4 py-3 flex justify-between items-center md:hidden shadow-md">
     <a href="index.html" class="flex items-center space-x-2">
+        <img src="img/Logo.png" alt="Mak Bong Logo" class="w-8 h-8 object-contain rounded-full border border-amber-500/40">
         <span class="text-xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-400 to-yellow-500">
-            🔥 Mak Bong
+            Mak Bong
         </span>
     </a>
     <a href="products.html" class="bg-gradient-to-r from-red-600 to-amber-600 text-white text-xs px-3 py-1.5 rounded-full font-bold shadow">
@@ -41,34 +43,34 @@
 
 <!-- Mobile Bottom Navigation Bar (แสดงผลเฉพาะหน้าจอมือถือ ติดด้านล่างสุดจอ) -->
 <div class="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-t border-amber-500/30 shadow-[0_-4px_20px_rgba(0,0,0,0.8)] md:hidden">
-    <div class="grid grid-cols-6 h-16 items-center text-center">
+    <div id="mobile-bottom-nav" class="grid grid-cols-6 h-16 items-center text-center">
         <!-- 1. หน้าแรก -->
-        <a href="index.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1">
+        <a href="index.html" class="mobile-nav-link flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1 h-full">
             <i class="fa-solid fa-house text-lg mb-0.5"></i>
             <span class="text-[10px]">หน้าแรก</span>
         </a>
         <!-- 2. แผนธุรกิจ -->
-        <a href="about.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1">
+        <a href="about.html" class="mobile-nav-link flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1 h-full">
             <i class="fa-solid fa-chart-line text-lg mb-0.5"></i>
             <span class="text-[10px]">แผนธุรกิจ</span>
         </a>
         <!-- 3. แพ็กเกจ -->
-        <a href="products.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1">
+        <a href="products.html" class="mobile-nav-link flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1 h-full">
             <i class="fa-solid fa-box-open text-lg mb-0.5"></i>
             <span class="text-[10px]">แพ็กเกจ</span>
         </a>
         <!-- 4. โปรโมชั่น -->
-        <a href="promotion.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1">
-            <i class="fa-solid fa-fire text-lg mb-0.5 text-amber-500"></i>
+        <a href="promotion.html" class="mobile-nav-link flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1 h-full">
+            <i class="fa-solid fa-fire text-lg mb-0.5"></i>
             <span class="text-[10px]">โปรโมชั่น</span>
         </a>
         <!-- 5. แผนที่ตั้ง -->
-        <a href="location.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1">
+        <a href="location.html" class="mobile-nav-link flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1 h-full">
             <i class="fa-solid fa-map-location-dot text-lg mb-0.5"></i>
             <span class="text-[10px]">แผนที่</span>
         </a>
         <!-- 6. รายรับ-รายจ่าย (Apps Script) -->
-        <a href="accounting.html" class="flex flex-col items-center justify-center text-amber-400 hover:text-amber-300 transition py-1 font-bold">
+        <a href="accounting.html" class="mobile-nav-link flex flex-col items-center justify-center text-gray-400 hover:text-amber-400 transition py-1 h-full">
             <i class="fa-solid fa-wallet text-lg mb-0.5"></i>
             <span class="text-[10px]">บัญชีร้าน</span>
         </a>

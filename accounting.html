@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ระบบรายรับ-รายจ่าย - Mak Bong</title>
+    <link rel="icon" type="image/png" href="img/Logo.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -11,8 +12,30 @@
 </head>
 <body class="bg-[#0f0f0f] text-gray-100 min-h-screen flex flex-col justify-between">
 
-    <!-- จุดเรียก Navbar -->
-    <div id="navbar-container"></div>
+    <!-- Page Preloader (โลโก้โหลดหน้าเว็บ ป้องกันจอกระตุก) -->
+    <div id="page-preloader" class="fixed inset-0 z-[9999] bg-[#0a0a0a] flex flex-col items-center justify-center transition-all duration-400">
+        <div class="relative flex flex-col items-center">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-red-600 via-amber-500 to-yellow-400 rounded-full blur-xl opacity-80 animate-pulse"></div>
+                <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center shadow-2xl">
+                    <img src="img/Logo.png" alt="Mak Bong Logo" class="w-full h-full object-contain rounded-full bg-black p-2 animate-pulse">
+                </div>
+            </div>
+            <div class="mt-6 flex items-center gap-2">
+                <span class="text-xs sm:text-sm font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-400 to-yellow-400 uppercase">
+                    กำลังโหลดความแซ่บ...
+                </span>
+                <div class="flex space-x-1">
+                    <div class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                    <div class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                    <div class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-bounce"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- จุดเรียก Navbar (กำหนดความสูงขั้นต่ำป้องกัน Layout Shift) -->
+    <div id="navbar-container" class="min-h-[64px] md:min-h-[80px]"></div>
 
     <!-- Main Content -->
     <main class="flex-grow py-10 max-w-7xl mx-auto px-4 w-full">

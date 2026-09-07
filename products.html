@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>แพ็กเกจสินค้า - Mak Bong</title>
+    <link rel="icon" type="image/png" href="img/Logo.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>body { font-family: 'Prompt', sans-serif; }</style>
 </head>
 <body class="bg-[#0f0f0f] text-gray-100 min-h-screen flex flex-col justify-between">
-    <!-- จุดเรียก Navbar -->
-    <div id="navbar-container"></div>
 
-    <main class="flex-grow py-16 max-w-4xl mx-auto px-4 w-full">
+    <!-- Page Preloader (โลโก้โหลดหน้าเว็บ ป้องกันจอกระตุก) -->
+    <div id="page-preloader" class="fixed inset-0 z-[9999] bg-[#0a0a0a] flex flex-col items-center justify-center transition-all duration-400">
+        <div class="relative flex flex-col items-center">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-red-600 via-amber-500 to-yellow-400 rounded-full blur-xl opacity-80 animate-pulse"></div>
+                <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center shadow-2xl">
+                    <img src="img/Logo.png" alt="Mak Bong Logo" class="w-full h-full object-contain rounded-full bg-black p-2 animate-pulse">
+                </div>
+            </div>
+            <div class="mt-6 flex items-center gap-2">
+                <span class="text-xs sm:text-sm font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-400 to-yellow-400 uppercase">
+                    กำลังโหลดความแซ่บ...
+                </span>
+                <div class="flex space-x-1">
+                    <div class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                    <div class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                    <div class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-bounce"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- จุดเรียก Navbar (กำหนดความสูงขั้นต่ำป้องกัน Layout Shift) -->
+    <div id="navbar-container" class="min-h-[64px] md:min-h-[80px]"></div>
+
+    <main class="flex-grow py-16 max-w-5xl mx-auto px-4 w-full">
         <div class="text-center mb-12">
             <span class="text-amber-400 text-xs font-bold tracking-widest uppercase bg-red-950 px-3 py-1 rounded-full border border-amber-500/30">Signature Package</span>
             <h1 class="text-4xl font-black text-white mt-3">แพ็กเกจความแซ่บ Mak Bong</h1>
@@ -21,49 +45,89 @@
             <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-amber-500 mx-auto mt-3 rounded"></div>
         </div>
 
-        <!-- แพ็กเกจเดี่ยว (Highlight Card) -->
-        <div class="bg-gradient-to-b from-red-950/50 via-black to-black border-2 border-amber-400 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+        <!-- แพ็กเกจเดี่ยว (Highlight Card with Image) -->
+        <div class="bg-gradient-to-b from-red-950/50 via-black to-black border-2 border-amber-400 rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden mb-12">
             <div class="absolute -right-16 -top-16 bg-amber-500/10 w-48 h-48 rounded-full blur-3xl pointer-events-none"></div>
             
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
-                <div>
-                    <span class="bg-gradient-to-r from-red-600 to-amber-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow">🔥 สินค้าซิกเนเจอร์</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white mt-4 mb-3">น้ำพริกแคปหมู Mak Bong (สูตรต้นตำรับ)</h2>
-                    <p class="text-gray-300 text-base leading-relaxed max-w-xl">
-                        แคปหมูไร้มันกรอบสนั่น คลุกเคล้าด้วยน้ำพริกสูตรลับเฉพาะ เผ็ดร้อนหอมกลิ่นพริกคั่วเตาถ่าย ทานกับอะไรก็อร่อย ฟินจนหยุดไม่อยู่!
-                    </p>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8">
+                <!-- Product Image -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group w-full max-w-sm">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-red-600 to-amber-500 rounded-2xl blur-lg opacity-40 group-hover:opacity-70 transition duration-500"></div>
+                        <img src="img/product.png" alt="น้ำพริกแคปหมู Mak Bong" class="relative w-full h-80 object-cover rounded-2xl border border-amber-500/40 shadow-2xl">
+                    </div>
                 </div>
-                <div class="text-left md:text-right bg-black/60 border border-amber-500/30 p-6 rounded-2xl w-full md:w-auto min-w-[200px]">
-                    <span class="text-xs text-gray-400 uppercase tracking-widest block mb-1">ราคาพิเศษ</span>
-                    <div class="text-4xl font-black text-amber-400">150.-</div>
-                    <span class="text-xs text-gray-400">ต่อกระปุก (ขนาดพกพาคุ้มค่า)</span>
-                </div>
-            </div>
 
-            <!-- รายละเอียดจุดเด่น -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 pt-6 border-t border-amber-500/20">
-                <div class="flex items-center space-x-3 text-gray-300 text-sm">
-                    <span class="text-amber-400 text-lg">✓</span>
-                    <span>แคปหมูทอดสดใหม่ ไม่เหม็นหืน</span>
-                </div>
-                <div class="flex items-center space-x-3 text-gray-300 text-sm">
-                    <span class="text-amber-400 text-lg">✓</span>
-                    <span>ซีลสุญญากาศ เก็บความกรอบนาน</span>
-                </div>
-                <div class="flex items-center space-x-3 text-gray-300 text-sm">
-                    <span class="text-amber-400 text-lg">✓</span>
-                    <span>ร่วมโปรโมชั่น ซื้อ 10 แถม 1 ใน Line OA</span>
+                <!-- Product Info -->
+                <div class="lg:col-span-7">
+                    <div class="flex flex-wrap items-center gap-2 mb-3">
+                        <span class="bg-gradient-to-r from-red-600 to-amber-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow">🔥 สินค้าซิกเนเจอร์</span>
+                        <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1.5 rounded-full border border-amber-500/30">ยอดขายอันดับ 1</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-black text-white mb-3">น้ำพริกแคปหมู Mak Bong (สูตรต้นตำรับ)</h2>
+                    <p class="text-gray-300 text-base leading-relaxed mb-6">
+                        แคปหมูไร้มันกรอบสนั่น คลุกเคล้าด้วยน้ำพริกสูตรลับเฉพาะ เผ็ดร้อนหอมกลิ่นพริกคั่วเตาถ่าน ทานกับอะไรก็อร่อย ฟินจนหยุดไม่อยู่!
+                    </p>
+
+                    <div class="bg-black/80 border border-amber-500/30 p-5 rounded-2xl mb-6 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 uppercase tracking-widest block mb-0.5">ราคาพิเศษช่วงแนะนำ</span>
+                            <div class="text-3xl sm:text-4xl font-black text-amber-400">50.- <span class="text-sm font-normal text-gray-400">/ กระปุก</span></div>
+                        </div>
+                        <span class="text-xs bg-red-950 text-red-400 border border-red-500/40 px-3 py-1 rounded-full font-bold">พกพาสะดวก</span>
+                    </div>
+
+                    <!-- จุดเด่น -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <div class="flex items-center space-x-2 text-gray-300 text-sm">
+                            <span class="text-amber-400 font-bold">✓</span>
+                            <span>แคปหมูทอดสดใหม่ ไม่เหม็นหืน</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-300 text-sm">
+                            <span class="text-amber-400 font-bold">✓</span>
+                            <span>ซีลสุญญากาศ เก็บความกรอบนาน</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-300 text-sm">
+                            <span class="text-amber-400 font-bold">✓</span>
+                            <span>พริกคั่วเตาถ่าน หอมเครื่องเทศ</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-300 text-sm">
+                            <span class="text-amber-400 font-bold">✓</span>
+                            <span>ร่วมโปรโมชั่น 10 แถม 1</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- ปุ่มสั่งซื้อ -->
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-col sm:flex-row gap-4 pt-6 border-t border-amber-500/20">
                 <a href="https://u.lin.ee/nxX3QAK" target="_blank" class="flex-grow text-center bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-bold py-4 px-8 rounded-2xl shadow-xl shadow-red-900/50 transition transform hover:-translate-y-0.5 text-lg">
                     🛒 สั่งซื้อผ่าน Line OA (รับสิทธิ์สะสมแต้ม/คูปอง)
                 </a>
                 <a href="promotion.html" class="text-center border border-amber-500/50 hover:bg-amber-500/10 text-amber-400 font-bold py-4 px-6 rounded-2xl transition">
                     ดูโปรโมชั่น 10 แถม 1 🔥
                 </a>
+            </div>
+        </div>
+
+        <!-- รายละเอียดความพิถีพิถัน (Close-up Showcase) -->
+        <div class="bg-black border border-amber-500/30 rounded-3xl p-6 md:p-8 shadow-xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <span class="text-amber-400 text-xs font-bold tracking-widest uppercase bg-red-950 px-3 py-1 rounded-full border border-amber-500/30">Fresh & Authentic</span>
+                    <h3 class="text-2xl font-black text-white mt-3 mb-4">คลุกเคล้าสดใหม่ ถึงเครื่องทุกกระปุก</h3>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
+                        เราใส่ใจในทุกขั้นตอนการผลิต ตั้งแต่การคัดสรรหนังหมูเกรดเอ ทอดจนพองกรอบไร้มัน และคลุกเคล้ากับเครื่องแกงน้ำพริกสูตรเฉพาะตัวของ "แม็กบอง" ให้รสชาติแซ่บนัว เผ็ดร้อน จัดจ้าน ถึงใจ
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p>🌶️ พริกแห้งคัดพิเศษ คั่วหอมไฟอ่อน</p>
+                        <p>🥓 แคปหมูเนื้อแน่น ไร้มัน กรุบกรอบ</p>
+                        <p>🔒 บรรจุภัณฑ์ปิดมิดชิด สะอาด ปลอดภัย</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="img/น้ำพริก1.jpg" alt="น้ำพริกแคปหมู แม็กบอง สดใหม่" class="w-full h-72 object-cover rounded-2xl border border-amber-500/30 shadow-xl group-hover:scale-105 transition duration-500">
+                </div>
             </div>
         </div>
     </main>
